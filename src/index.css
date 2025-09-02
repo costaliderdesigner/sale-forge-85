@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 174 72% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 174 20% 95%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 174 20% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 174 20% 88%;
+    --input: 174 20% 88%;
+    --ring: 174 72% 40%;
+    
+    /* Custom design tokens - Costa Líder Brand Colors */
+    --brand-teal: 174 72% 40%;
+    --brand-teal-dark: 174 72% 30%;
+    --brand-teal-light: 174 72% 55%;
+    --brand-black: 0 0% 10%;
+    --brand-white: 0 0% 100%;
+    --accent-orange: 35 90% 55%;
+    --accent-yellow: 45 95% 60%;
+    --success: 142 76% 36%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-teal)) 0%, hsl(var(--brand-teal-light)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent-orange)) 0%, hsl(var(--accent-yellow)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-teal-dark)) 0%, hsl(var(--brand-teal)) 50%, hsl(var(--brand-teal-light)) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-teal)) 0%, hsl(174 72% 50%) 100%);
+    --gradient-text-dark: linear-gradient(135deg, hsl(174 100% 30%) 0%, hsl(174 90% 25%) 100%);
+    --gradient-text-elegant: linear-gradient(135deg, hsl(174 100% 35%) 0%, hsl(174 90% 30%) 50%, hsl(174 80% 25%) 100%);
+    --gradient-text-premium: linear-gradient(135deg, hsl(174 100% 32%) 0%, hsl(174 90% 28%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(var(--brand-teal) / 0.15), 0 2px 4px -1px hsl(var(--brand-teal) / 0.08);
+    --shadow-hero: 0 25px 50px -12px hsl(var(--brand-teal) / 0.3);
+    --shadow-accent: 0 10px 40px -10px hsl(var(--accent-orange) / 0.4);
+    --shadow-brand: 0 20px 60px -10px hsl(var(--brand-teal) / 0.4);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 72% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 174 72% 40%;
+    
+    /* Dark mode brand colors */
+    --brand-teal: 174 72% 40%;
+    --brand-teal-dark: 174 72% 30%;
+    --brand-teal-light: 174 72% 55%;
+    --brand-black: 210 40% 98%;
+    --brand-white: 222.2 84% 4.9%;
+    --accent-orange: 35 90% 55%;
+    --accent-yellow: 45 95% 60%;
+    --success: 142 76% 36%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-teal)) 0%, hsl(var(--brand-teal-light)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent-orange)) 0%, hsl(var(--accent-yellow)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 20%) 0%, hsl(220 25% 15%) 50%, hsl(220 20% 10%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-teal)) 0%, hsl(174 72% 50%) 100%);
+    --gradient-text-dark: linear-gradient(135deg, hsl(174 100% 75%) 0%, hsl(174 90% 70%) 100%);
+    --gradient-text-elegant: linear-gradient(135deg, hsl(174 100% 80%) 0%, hsl(174 90% 75%) 50%, hsl(174 80% 70%) 100%);
+    --gradient-text-premium: linear-gradient(135deg, hsl(174 100% 77%) 0%, hsl(174 90% 72%) 100%);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities using design tokens */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+  
+  .bg-gradient-text-dark {
+    background: var(--gradient-text-dark);
+  }
+  
+  .bg-gradient-text-elegant {
+    background: var(--gradient-text-elegant);
+  }
+  
+  .bg-gradient-text-premium {
+    background: var(--gradient-text-premium);
+  }
+  
+  .bg-gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+  }
+  
+  /* Shadow utilities */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hero {
+    box-shadow: var(--shadow-hero);
+  }
+  
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  
+  .shadow-elegant {
+    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.15), 0 4px 15px -4px hsl(var(--primary) / 0.1);
+  }
+  
+  /* Brand color utilities */
+  .text-brand {
+    color: hsl(var(--brand-teal));
+  }
+  
+  .bg-brand {
+    background-color: hsl(var(--brand-teal));
+  }
+  
+  .border-brand {
+    border-color: hsl(var(--brand-teal));
+  }
+}
