@@ -75,20 +75,20 @@ const PriceSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-background to-secondary/20">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-4">
             <Clock className="w-4 h-4 mr-2" />
             Oferta por tempo limitado
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Investimento que se Paga
             <span className="text-brand-teal"> em 30 Dias</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            <strong>ANCORAGEM:</strong> Nossos clientes pagam até R$ 15.000 por landing pages similares.<br />
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8">
+            <strong>ANCORAGEM:</strong> Nossos clientes pagam até R$ 15.000 por landing pages similares.<br className="hidden sm:block" />
             <strong>VOCÊ PAGA:</strong> Apenas uma fração disso com resultados garantidos.
           </p>
           
@@ -110,7 +110,7 @@ const PriceSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
@@ -130,8 +130,8 @@ const PriceSection = () => {
               )}
 
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                <CardDescription className="text-base">{plan.description}</CardDescription>
+                <CardTitle className="text-xl sm:text-2xl font-bold">{plan.name}</CardTitle>
+                <CardDescription className="text-sm sm:text-base">{plan.description}</CardDescription>
                 
                 {/* Pricing */}
                 <div className="py-6">
@@ -143,7 +143,7 @@ const PriceSection = () => {
                       -{plan.savings}
                     </Badge>
                   </div>
-                  <div className="text-4xl font-bold text-brand-teal">
+                  <div className="text-3xl sm:text-4xl font-bold text-brand-teal">
                     {plan.price}
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -174,12 +174,20 @@ const PriceSection = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  className={`w-full font-bold py-6 text-base ${
+                  className={`w-full font-bold py-4 sm:py-6 text-sm sm:text-base ${
                     plan.popular 
                       ? "bg-gradient-brand hover:shadow-brand" 
                       : ""
                   }`}
                   variant={plan.popular ? "default" : "outline"}
+                  onClick={() => {
+                    const phone = "5511999999999"; // Substitua pelo número real
+                    const message = encodeURIComponent(
+                      `Olá! Tenho interesse no plano "${plan.name}" e gostaria de mais informações.`
+                    );
+                    const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
                 >
                   {plan.cta}
                 </Button>
@@ -202,8 +210,15 @@ const PriceSection = () => {
             <p className="text-muted-foreground mb-6">
               Agende uma conversa gratuita de 15 minutos e descubra qual é a melhor estratégia para o seu negócio.
             </p>
-            <Button variant="outline" size="lg" className="font-semibold">
-              Agendar Conversa Gratuita
+            <Button variant="outline" size="lg" className="font-semibold" onClick={() => {
+              const phone = "5511999999999"; // Substitua pelo número real
+              const message = encodeURIComponent(
+                "Olá! Vi sua landing page e quero agendar uma conversa gratuita para conhecer melhor os serviços."
+              );
+              const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+              window.open(whatsappUrl, '_blank');
+            }}>
+              💬 Agendar Conversa Gratuita
             </Button>
           </div>
         </div>

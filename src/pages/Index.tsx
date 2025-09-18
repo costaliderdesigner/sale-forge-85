@@ -10,7 +10,7 @@ import ROISection from "@/components/ROISection";
 import PriceSection from "@/components/PriceSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import LeadForm from "@/components/LeadForm";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
@@ -35,7 +35,7 @@ const Index = () => {
       </div>
       <FAQSection />
       <CTASection />
-      <LeadForm />
+      <WhatsAppCTA />
       <Footer />
       <FloatingWhatsApp />
     </div>

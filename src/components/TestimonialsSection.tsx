@@ -21,23 +21,23 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-brand">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-brand">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             O que nossos clientes dizem
           </h2>
-          <p className="text-white/80 text-lg">
+          <p className="text-white/80 text-base sm:text-lg">
             Resultados reais de quem confiou no nosso trabalho
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-8 bg-white/10 backdrop-blur-sm border-white/20 text-white shadow-hero">
+            <Card key={index} className="p-4 sm:p-6 lg:p-8 bg-white/10 backdrop-blur-sm border-white/20 text-white shadow-hero">
               <div className="mb-6">
                 <Quote className="w-8 h-8 text-accent-orange mb-4" />
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-base sm:text-lg leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
                 <div className="flex mb-4">
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <Avatar className="w-12 h-12">
                   <AvatarFallback className="bg-accent-orange text-white font-bold">
                     {testimonial.initials}

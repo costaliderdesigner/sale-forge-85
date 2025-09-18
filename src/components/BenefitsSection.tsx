@@ -32,10 +32,10 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-black mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-black mb-4 sm:mb-6">
             Por que nossos clientes{" "}
             <span className="text-brand-teal font-bold">
               vendem mais
@@ -44,21 +44,21 @@ const BenefitsSection = () => {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <Card key={index} className="p-8 shadow-card hover:shadow-brand transition-all duration-300 border-l-4 border-l-brand-teal">
-                <div className="flex items-start gap-6">
+              <Card key={index} className="p-4 sm:p-6 lg:p-8 shadow-card hover:shadow-brand transition-all duration-300 border-l-4 border-l-brand-teal">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                   <div className="w-12 h-12 bg-brand-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-6 h-6 text-brand-teal" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-brand-black mb-3 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-brand-teal mr-3" />
-                      {benefit.title}
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl font-bold text-brand-black mb-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-brand-teal flex-shrink-0" />
+                      <span>{benefit.title}</span>
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
               </Card>

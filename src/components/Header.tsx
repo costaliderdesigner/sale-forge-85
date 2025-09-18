@@ -34,7 +34,7 @@ const Header = () => {
     { label: "Calculadora ROI", id: "calculadora-roi", isExternal: true },
     { label: "Preços", id: "precos" },
     { label: "FAQ", id: "faq" },
-    { label: "Contato", id: "contato" }
+    { label: "WhatsApp", id: "contato" }
   ];
 
   return (
@@ -69,12 +69,19 @@ const Header = () => {
         {/* Actions */}
         <div className="flex items-center gap-4">
           <Button
-            onClick={() => scrollToSection("contato")}
+            onClick={() => {
+              const phone = "5511999999999"; // Substitua pelo número real
+              const message = encodeURIComponent(
+                "Olá! Vi sua landing page e quero saber mais sobre como vocês podem me ajudar a aumentar minhas conversões."
+              );
+              const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+              window.open(whatsappUrl, '_blank');
+            }}
             variant="default"
             size="sm"
             className="hidden md:flex bg-gradient-primary hover:bg-gradient-brand border-0 shadow-brand"
           >
-            Falar agora
+            💬 Falar agora
           </Button>
           
           {/* Mobile menu button */}
@@ -107,12 +114,19 @@ const Header = () => {
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection("contato")}
+              onClick={() => {
+                const phone = "5511999999999"; // Substitua pelo número real
+                const message = encodeURIComponent(
+                  "Olá! Vi sua landing page e quero saber mais sobre como vocês podem me ajudar a aumentar minhas conversões."
+                );
+                const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+                window.open(whatsappUrl, '_blank');
+              }}
               variant="default"
               size="sm"
               className="mt-4 self-start"
             >
-              Falar agora
+              💬 Falar agora
             </Button>
           </nav>
         </div>
