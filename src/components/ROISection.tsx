@@ -99,10 +99,11 @@ const ROISection = () => {
               <Button 
                 onClick={() => navigate('/calculadora-roi')}
                 size="lg"
-                className="bg-gradient-primary hover:bg-gradient-brand shadow-brand text-lg px-8 py-6 h-auto"
+                className="w-full sm:w-auto bg-gradient-primary hover:bg-gradient-brand shadow-brand text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto"
               >
-                <Calculator className="h-5 w-5 mr-3" />
-                Calcular Meu ROI Gratuitamente
+                <Calculator className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
+                <span className="hidden sm:inline">Calcular Meu ROI Gratuitamente</span>
+                <span className="sm:hidden">Calcular ROI Grátis</span>
               </Button>
               
               <p className="text-xs text-muted-foreground mt-4">
