@@ -7,7 +7,7 @@ const Logo = ({ className = "h-16 w-16", showText = true }: LogoProps) => {
   return (
     <div className="flex items-center gap-3">
       <img
-        src="/lovable-uploads/01a94ed3-996a-4ec2-898c-e1f37b77d499.png"
+        src="/src/assets/logo.png"
         alt="Costa Líder Designer Logo"
         className={className}
       />
