@@ -11,6 +11,7 @@ import PriceSection from "@/components/PriceSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
+import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
@@ -34,6 +35,9 @@ const Index = () => {
         <PriceSection />
       </div>
       <FAQSection />
+      <div id="blog">
+        <BlogSection />
+      </div>
       <CTASection />
       <WhatsAppCTA />
       <Footer />
