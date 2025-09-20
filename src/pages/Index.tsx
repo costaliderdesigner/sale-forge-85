@@ -1,3 +1,4 @@
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustSection from "@/components/TrustSection";
@@ -14,10 +15,15 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { ProgressBar } from "@/components/ui/progress-bar";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { ExitIntentPopup } from "@/components/ui/exit-intent-popup";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead />
+      <ProgressBar />
       <Header />
       <HeroSection />
       <TrustSection />
@@ -42,6 +48,8 @@ const Index = () => {
       <WhatsAppCTA />
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
+      <ExitIntentPopup />
     </div>
   );
 };

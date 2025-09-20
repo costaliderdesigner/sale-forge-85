@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const FloatingWhatsApp = () => {
   const [isVisible, setIsVisible] = useState(true);
   
-  const phoneNumber = "5511999999999"; // Substitua pelo número real
+  const phoneNumber = "5511988776655"; // Número da Costa Líder Designer
   const message = "Olá! Gostaria de saber mais sobre as landing pages da Costa Líder Designer.";
   
   const handleWhatsAppClick = () => {
@@ -22,8 +22,9 @@ const FloatingWhatsApp = () => {
         <div className="relative">
           <Button
             onClick={handleWhatsAppClick}
-            className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-110"
+            className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 focus-brand animate-float"
             size="sm"
+            aria-label="Falar no WhatsApp"
           >
             <MessageCircle className="w-6 h-6" />
           </Button>
@@ -41,8 +42,9 @@ const FloatingWhatsApp = () => {
         <div className="relative">
           <Button
             onClick={handleWhatsAppClick}
-            className="bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-105"
+            className="bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 focus-brand animate-pulse-subtle"
             size="lg"
+            aria-label="Falar no WhatsApp"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
             Falar no WhatsApp
